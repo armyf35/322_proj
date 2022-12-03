@@ -1,0 +1,697 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    
+    <main>
+    <!-- section -->
+    <section class="mt-8 mb-lg-14 mb-8">
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- col -->
+          <div class="col-lg-12">
+            <!-- page header -->
+            <div class="card mb-4 bg-light border-0">
+              <!-- card body -->
+              <div class="card-body p-9">
+                <!-- title -->
+                <h2 class="mb-0 fs-1">Snacks &amp; Munchies</h2>
+              </div>
+            </div>
+            <!-- list icon -->
+            <div class="d-lg-flex justify-content-between align-items-center">
+              <div>
+                <p class="mb-3 mb-md-0"> <span class="text-dark">24 </span> Products found </p>
+              </div>
+              <!-- icon -->
+              <div class="d-md-flex justify-content-between align-items-center">
+                <div>
+                <a href="shop-list.html" class="text-muted me-3"><i class="bi bi-list-ul"></i></a>
+                <a href="shop-grid.html" class=" me-3 active"><i class="bi bi-grid"></i></a>
+                <a href="shop-grid-3-column.html" class="me-3 text-muted"><i class="bi bi-grid-3x3-gap"></i></a>
+                </div>
+                <div class="d-flex mt-2 mt-lg-0">
+                  <div class="me-2 flex-grow-1">
+                    <!-- select option -->
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">Show: 50</option>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                    </select></div>
+                  <div>
+                    <!-- select option -->
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">Sort by: Featured</option>
+                      <option value="Low to High">Price: Low to High</option>
+                      <option value="High to Low"> Price: High to Low</option>
+                      <option value="Release Date"> Release Date</option>
+                      <option value="Avg. Rating"> Avg. Rating</option>
+  
+                    </select></div>
+                </div>
+  
+              </div>
+            </div>
+            <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3 mt-2">
+  
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+  
+                    <!-- badge -->
+                    <div class="text-center position-relative ">
+                      <div class=" position-absolute top-0 start-0">
+                        <span class="badge bg-danger">Sale</span>
+                      </div>
+                      <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &amp;
+                          Munchies</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Haldiram's Sev Bhujia</a></h2>
+                    <div>
+  
+                      <!-- rating --><small class="text-warning"> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5(149)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$18</span> <span class="text-decoration-line-through text-muted">$24</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Bakery &amp;
+                          Biscuits</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">NutriChoice Digestive </a>
+                    </h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (25)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$24</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Bakery &amp;
+                          Biscuits</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Cadbury 5 Star Chocolate</a>
+                    </h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5 (469)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$32</span> <span class="text-decoration-line-through text-muted">$35</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &amp;
+                          Munchies</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Onion Flavour Potato</a></h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i></small> <span class="text-muted small">3.5 (456)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$3</span> <span class="text-decoration-line-through text-muted">$5</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Instant
+                          Food</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Salted Instant Popcorn </a>
+                    </h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (39)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <div><span class="text-dark">$13</span> <span class="text-decoration-line-through text-muted">$18</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <!-- badge -->
+                    <div class="text-center position-relative ">
+                      <div class=" position-absolute top-0">
+                        <span class="badge bg-danger">Sale</span>
+                      </div>
+  
+                      <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread
+                          &amp; Eggs</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Blueberry Greek Yogurt</a>
+                    </h2>
+                    <div>
+  
+                      <!-- rating --><small class="text-warning"> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (189)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$18</span> <span class="text-decoration-line-through text-muted">$24</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread
+                          &amp; Eggs</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Britannia Cheese Slices</a>
+                    </h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5 (345)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$24</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Instant
+                          Food</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Kellogg's Original Cereals</a>
+                    </h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4 (90)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$32</span> <span class="text-decoration-line-through text-muted">$35</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &amp;
+                          Munchies</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Slurrp Millet Chocolate </a>
+                    </h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (67)</span>
+                    </div>
+                    <!-- price -->
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                      <div><span class="text-dark">$3</span> <span class="text-decoration-line-through text-muted">$5</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="col">
+                <!-- card product -->
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative"> <a href="shop-single.html">
+                        <!-- img --><img src="../assets/images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                      <!-- action btn -->
+                      <div class="card-product-action">
+                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Quick View"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
+                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                      </div>
+                    </div>
+                    <!-- heading -->
+                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread
+                          &amp; Eggs</small></a></div>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Amul Butter - 500 g</a></h2>
+                    <!-- rating -->
+                    <div class="text-warning">
+  
+                      <small> <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i></small> <span class="text-muted small">3.5 (89)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <div><span class="text-dark">$13</span> <span class="text-decoration-line-through text-muted">$18</span>
+                      </div>
+                      <!-- btn -->
+                      <div><a href="#!" class="btn btn-primary btn-sm">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg> Add</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row -->
+            <div class="row mt-8">
+              <div class="col">
+                <!-- nav -->
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item disabled">
+                      <a class="page-link  mx-1 rounded-3 " href="#" aria-label="Previous">
+                        <i class="feather-icon icon-chevron-left"></i>
+                      </a>
+                    </li>
+                    <li class="page-item "><a class="page-link  mx-1 rounded-3 active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link mx-1 rounded-3 text-body" href="#">2</a></li>
+  
+                    <li class="page-item"><a class="page-link mx-1 rounded-3 text-body" href="#">...</a></li>
+                    <li class="page-item"><a class="page-link mx-1 rounded-3 text-body" href="#">12</a></li>
+                    <li class="page-item">
+                      <a class="page-link mx-1 rounded-3 text-body" href="#" aria-label="Next">
+                        <i class="feather-icon icon-chevron-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+  
+    <!-- modal -->
+    <!-- Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-8">
+          <div class="position-absolute top-0 end-0 me-3 mt-3">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <!-- img slide -->
+              <div class="tns-outer" id="productModal-ow"><div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">3</span>  of 4</div><div id="productModal-mw" class="tns-ovh"><div class="tns-inner" id="productModal-iw"><div class="product productModal  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="productModal" style="transition-duration: 0s; transform: translate3d(-33.3333%, 0px, 0px);"><div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                  <div class="zoom" onmousemove="zoom(event)" style="
+                      background-image: url(../assets/images/products/product-single-img-4.jpg);
+                    ">
+                    <!-- img -->
+                    <img src="../assets/images/products/product-single-img-4.jpg" alt="">
+                  </div>
+                </div>
+                <div class="zoom tns-item" onmousemove="zoom(event)" style="
+                    background-image: url(../assets/images/products/product-single-img-1.jpg);
+                  " id="productModal-item0" aria-hidden="true" tabindex="-1">
+                  <!-- img -->
+                  <img src="../assets/images/products/product-single-img-1.jpg" alt="">
+                </div>
+                <div class="tns-item tns-slide-active" id="productModal-item1">
+                  <div class="zoom" onmousemove="zoom(event)" style="
+                      background-image: url(../assets/images/products/product-single-img-2.jpg);
+                    ">
+                    <!-- img -->
+                    <img src="../assets/images/products/product-single-img-2.jpg" alt="">
+                  </div>
+                </div>
+                <div class="tns-item" id="productModal-item2" aria-hidden="true" tabindex="-1">
+                  <div class="zoom" onmousemove="zoom(event)" style="
+                      background-image: url(../assets/images/products/product-single-img-3.jpg);
+                    ">
+                    <!-- img -->
+                    <img src="../assets/images/products/product-single-img-3.jpg" alt="">
+                  </div>
+                </div>
+                <div class="tns-item" id="productModal-item3" aria-hidden="true" tabindex="-1">
+                  <div class="zoom" onmousemove="zoom(event)" style="
+                      background-image: url(../assets/images/products/product-single-img-4.jpg);
+                    ">
+                    <!-- img -->
+                    <img src="../assets/images/products/product-single-img-4.jpg" alt="">
+                  </div>
+                </div>
+              <div class="zoom tns-item tns-slide-cloned" onmousemove="zoom(event)" style="
+                    background-image: url(../assets/images/products/product-single-img-1.jpg);
+                  " aria-hidden="true" tabindex="-1">
+                  <!-- img -->
+                  <img src="../assets/images/products/product-single-img-1.jpg" alt="">
+                </div></div></div></div></div>
+              <!-- product tools -->
+              <div class="product-tools">
+                <div class="thumbnails row g-3" id="productModalThumbnails" aria-label="Carousel Pagination">
+                  <div class="col-3" data-nav="0" tabindex="-1" aria-label="Carousel Page 1" aria-controls="productModal">
+                    <div class="thumbnails-img">
+                      <!-- img -->
+                      <img src="../assets/images/products/product-single-img-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-3 tns-nav-active" data-nav="1" aria-label="Carousel Page 2 (Current Slide)" aria-controls="productModal">
+                    <div class="thumbnails-img">
+                      <!-- img -->
+                      <img src="../assets/images/products/product-single-img-2.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-3" data-nav="2" tabindex="-1" aria-label="Carousel Page 3" aria-controls="productModal">
+                    <div class="thumbnails-img">
+                      <!-- img -->
+                      <img src="../assets/images/products/product-single-img-3.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-3" data-nav="3" tabindex="-1" aria-label="Carousel Page 4" aria-controls="productModal">
+                    <div class="thumbnails-img">
+                      <!-- img -->
+                      <img src="../assets/images/products/product-single-img-4.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ps-lg-8 mt-6 mt-lg-0">
+                <a href="#!" class="mb-4 d-block">Bakery Biscuits</a>
+                <h2 class="mb-1 h1">Napolitanke Ljesnjak</h2>
+                <div class="mb-4">
+                  <small class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i></small><a href="#" class="ms-2">(30 reviews)</a>
+                </div>
+                <div class="fs-4">
+                  <span class="fw-bold text-dark">$32</span>
+                  <span class="text-decoration-line-through text-muted">$35</span><span><small class="fs-6 ms-2 text-danger">26% Off</small></span>
+                </div>
+                <hr class="my-6">
+                <div class="mb-4">
+                  <button type="button" class="btn btn-outline-secondary">
+                    250g
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">
+                    500g
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">
+                    1kg
+                  </button>
+                </div>
+                <div>
+                  <!-- input -->
+                  <!-- input -->
+                  <div class="input-group input-spinner  ">
+                    <input type="button" value="-" class="button-minus  btn  btn-sm " data-field="quantity">
+                    <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field form-control-sm form-input   ">
+                    <input type="button" value="+" class="button-plus btn btn-sm " data-field="quantity">
+                  </div>
+                </div>
+                <div class="mt-3 row justify-content-start g-2 align-items-center">
+                 
+                  <div class="col-lg-4 col-md-5 col-6 d-grid">
+                    <!-- button -->
+                    <!-- btn -->
+                    <button type="button" class="btn btn-primary">
+                      <i class="feather-icon icon-shopping-bag me-2"></i>Add to
+                      cart
+                    </button>
+                  </div>
+                  <div class="col-md-4 col-5">
+                    <!-- btn -->
+                    <a class="btn btn-light" href="#" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                    <a class="btn btn-light" href="shop-wishlist.html" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="feather-icon icon-heart"></i></a>
+                  </div>
+                </div>
+                <hr class="my-6">
+                <div>
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td>Product Code:</td>
+                        <td>FBB00255</td>
+                      </tr>
+                      <tr>
+                        <td>Availability:</td>
+                        <td>In Stock</td>
+                      </tr>
+                      <tr>
+                        <td>Type:</td>
+                        <td>Fruits</td>
+                      </tr>
+                      <tr>
+                        <td>Shipping:</td>
+                        <td>
+                          <small>01 day shipping.<span class="text-muted">( Free pickup today)</span></small>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+  
+  </body>
+
+  
+{% endblock %}
