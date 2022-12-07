@@ -22,6 +22,21 @@ def signup():
 def product():
     return render_template("product.html")
 
+@app.route('/setting')
+def setting():
+    return render_template("account-settings.html")
+
+@app.route('/orders')
+def orders():
+    return render_template("account-order.html")
+
+@app.route('/address')
+def address():
+    return render_template("account-address.html")
+
+@app.route('/payment')
+def payment():
+    return render_template("account-payment.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

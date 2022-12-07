@@ -6,7 +6,7 @@
 	font-family:"feather-icons";
 	src:url("feather-icons.eot?e0a20d6edb74f52c006bb300686580b0");
 	src:url("feather-icons.eot?e0a20d6edb74f52c006bb300686580b0#iefix") format("embedded-opentype"),
-		url("feather-icons.woff?e0a20d6edb74f52c006bb300686580b0") format("woff"),
+		url("/static/css/fonts/feather-icons.woff") format("woff"),
 		url("feather-icons.ttf?e0a20d6edb74f52c006bb300686580b0") format("truetype");
 	font-weight:normal;
 	font-style:normal;

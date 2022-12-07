@@ -135,7 +135,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/search" role="button">
+                  <a class="nav-link" href="{{url_for('search')}}" role="button">
                     Shop
                   </a>
                 </li>
@@ -153,14 +153,11 @@
                         My Account <i class="bi bi-chevron-down"></i>
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../pages/account-orders.html">Orders</a></li>
-                        <li><a class="dropdown-item" href="../pages/account-settings.html">Settings</a></li>
-                        <li><a class="dropdown-item" href="../pages/account-address.html">Address</a></li>
-                        <li><a class="dropdown-item" href="../pages/account-payment-method.html">Payment Method</a>
-                        </li>
-                        <li><a class="dropdown-item" href="../pages/account-notification.html">Notification</a></li>
-    
-    
+                        <li><a class="dropdown-item" href="{{url_for('orders')}}">Orders</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('setting')}}">Settings</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('address')}}">Address</a></li>
+                        <li><a class="dropdown-item" href="{{url_for('payment')}}">Payment Method</a></li>
+
                       </ul>
                     </li>
                   </ul>
