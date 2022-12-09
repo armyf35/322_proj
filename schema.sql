@@ -1,0 +1,31 @@
+
+DROP TABLE IF EXISTS AllUser;
+DROP TABLE IF EXISTS SuperUser;
+DROP TABLE IF EXISTS OrdinaryUser;
+
+
+CREATE TABLE AllUser (
+  ID INTEGER PRIMARY KEY,
+  email TEXT UNIQUE NOT NULL,
+  firstName TEXT NOT NULL,
+  lastName TEXT NOT NULL,
+  password TEXT NOT NULL,
+  address TEXT,
+  phoneNumber INTEGER,
+  userType INTEGER DEFAULT 0
+);
+
+CREATE TABLE SuperUser (
+    ID INTEGER PRIMARY KEY,
+    FOREIGN KEY (ID) REFERENCES AllUser (ID)
+);
+
+CREATE TABLE OrdinaryUser (
+    ID INTEGER PRIMARY KEY,
+    superUserID INTEGER UNIQUE,
+    banHammer BOOLEAN DEFAULT 0,
+    balance REAL NOT NULL,
+    rating REAL,
+    FOREIGN KEY (ID) REFERENCES AllUser (ID),
+    FOREIGN KEY (superUserID) REFERENCES SuperUser (ID)
+);
