@@ -1,12 +1,12 @@
     <!-- navigation -->
-    <nav class="navbar py-lg-4 py-3 px-0 border-bottom navbar-menu">  
+    <nav class="navbar py-lg-4 py-3 px-0 border-bottom navbar-menu">
       <div class="container-fluid">
         <div class="row w-100 align-items-center g-0 g-lg-3">
           <div class="col-xxl-10 col-lg-8">
             <div class="d-flex align-items-center">
               <a class="navbar-brand d-none d-lg-block ms-4" href="/">
                 <img src="/static/img/logo.png" alt="Bidhub">
-    
+
               </a>
               <div class="d-flex  w-100 ms-4 ">
                 <form action="#" class="w-100 d-none d-lg-block">
@@ -21,7 +21,7 @@
                         </button>
                     </span>
                 </div>
-    
+
                 </form>
               </div>
             </div>
@@ -34,27 +34,27 @@
               </div>
             </div>
           </div>
-    
+
           <div class="col-xxl-2 col-lg-4 d-flex align-items-center justify-content-end ">
             <!-- Button trigger modal -->
 
           </div>
         </div>
-  
+
     </nav>
     <!-- Modal -->
-   
+
 
     <div class="border-bottom pb-lg-4 pb-3">
       <nav class="navbar navbar-expand-lg navbar-light navbar-default pt-0 pb-0">
         <div class="container px-0 px-md-3">
-    
+
           <div class="offcanvas offcanvas-start p-4 p-lg-0" id="navbar-default">
-    
+
             <div class="d-flex justify-content-between align-items-center mb-2 d-block d-lg-none">
               <a href="/"><img src="/static/img/logo.png" alt="Bidhub"></a>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>    
+            </div>
 
             <div class="d-none d-lg-block">
               <ul class="navbar-nav ">
@@ -68,35 +68,31 @@
                     Shop
                   </a>
                 </li>
-    
+
                 <li class="nav-item dropdown">
                   <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Account <i class="bi bi-chevron-down"></i>
                   </a>
                   <ul class="dropdown-menu">
+                    {% if not current_user.is_authenticated %}
                     <li><a class="dropdown-item" href="{{url_for('signin')}}">Sign in</a></li>
                     <li><a class="dropdown-item" href="{{url_for('signup')}}">Signup</a></li>
-                    <li class="dropdown-submenu dropend">
-                      <a class="dropdown-item dropdown-list-group-item " href="#">
-                        My Account <i class="bi bi-chevron-down"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{url_for('orders')}}">Orders</a></li>
-                        <li><a class="dropdown-item" href="{{url_for('setting')}}">Settings</a></li>
-                        <li><a class="dropdown-item" href="{{url_for('address')}}">Address</a></li>
-                        <li><a class="dropdown-item" href="{{url_for('payment')}}">Payment Method</a></li>
-
-                      </ul>
-                    </li>
+                    <li><a class="dropdown-item" href="../pages/forgot-password.html">Forgot Password</a></li>
+                    {% else %}
+                    <li><a class="dropdown-item" href="{{url_for('orders')}}">Orders</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('setting')}}">Settings</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('address')}}">Address</a></li>
+                    <li><a class="dropdown-item" href="{{url_for('payment')}}">Payment Method</a></li>
+                    {% endif %}
                   </ul>
                 </li>
               </ul>
             </div>
- 
-    
-    
+
+
+
           </div>
         </div>
-    
+
       </nav>
     </div>

@@ -42,15 +42,17 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{url_for('payment')}}"><i class="feather-icon icon-credit-card me-2"></i>Payment Method</a>
                 </li>
-        
+
                 <!-- nav item -->
                 <li class="nav-item">
                   <hr>
                 </li>
                 <!-- nav item -->
-                <li class="nav-item">
-                  <a class="nav-link " href="{{url_for('index')}}"><i class="feather-icon icon-log-out me-2"></i>Log out</a>
-                </li>
+                {% if current_user.is_authenticated %}
+                <li><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>
+                  {% else %}
+                <li><a href="/signin">GoLogin <span class="sr-only">(current)</span></a></li>
+                {% endif %}
               </ul>
             </div>
           </div>
@@ -70,17 +72,17 @@
                       <!-- input -->
                       <div class="mb-3">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control" placeholder="First Name, Last Name">
+                        <input type="text" class="form-control" placeholder="firstname lastname" value="{{current_user.getName()}}">
                       </div>
                       <!-- input -->
                       <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="example@gmail.com">
+                        <input type="email" class="form-control" placeholder="example@gmail.com" value={{current_user.getEmail()}}>
                       </div>
                       <!-- input -->
                       <div class="mb-5">
                         <label class="form-label">Phone</label>
-                        <input type="text" class="form-control" placeholder="Phone number">
+                        <input type="text" class="form-control" placeholder="Phone number" value="{{current_user.getPhoneNumber()}}">
                       </div>
                       <!-- button -->
                       <div class="mb-3">
@@ -128,8 +130,8 @@
       </div>
     </section>
   </main>
-  
-  
+
+
   </body>
 
   {% endblock %}
