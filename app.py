@@ -12,7 +12,7 @@ login_manager = LoginManager(app)
 login_manager.login_view = "login"
 
 def get_db_connection():
-    BASE_DIR = os.path.dirname(os.path.abspath("322_proj\database.sqlite3"))
+    BASE_DIR = os.path.dirname(os.path.abspath("database.sqlite3"))
     db_path = os.path.join(BASE_DIR, "database.sqlite3")
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
@@ -37,10 +37,15 @@ def signin():
         email = request.form['email']
         password = request.form['password']
 
-        cur = conn.cursor();
+        cur = conn.cursor()
         cur.execute("SELECT * FROM AllUser WHERE email = ?", (email,))
-        user = list(cur.fetchone())
-        
+        user = cur.fetchone()
+        if (user is None):
+            flash('No user with email found')
+            return render_template("signin.html")
+
+        user = list(user)
+
         if user[1] == email and user[4] == password:
             userIn = AllUser(user[0], user[1], user[4], user[2], user[3])
             login_user(userIn)
@@ -53,7 +58,7 @@ def signin():
 
     return render_template("signin.html")
 
-    
+
 
 @app.route('/')
 def index():
@@ -75,17 +80,17 @@ def signup():
         lastname = request.form['lastname']
         email = request.form['email']
         password = request.form['password']
-        
+
         cur = conn.cursor();
 
         cur.execute("SELECT * FROM AllUser WHERE email = ?", (email,))
 
         if cur.fetchone() is not None:
-            
+
             flash("That email is already taken...")
             conn.close()
             return render_template('signup.html')
-        
+
         else:
             conn.execute("INSERT INTO AllUser (firstname,lastname,email,password) VALUES (?,?,?,?)",(firstname,lastname,email,password))
             conn.commit()
@@ -107,7 +112,7 @@ def product():
 
 @app.route('/setting')
 def setting():
-    
+
     return render_template("account-settings.html")
 
 @app.route('/orders')
