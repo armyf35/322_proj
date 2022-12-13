@@ -3,7 +3,6 @@
 {% block content %}
 
 <body>
-  <h1>Flashing messages</h1>
     {% for message in get_flashed_messages() %}
       <div class="alert-error">Error: {{ message }}</div>
     {% endfor %}
@@ -44,12 +43,12 @@
                   <!-- input --><input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password" required="">
                 </div>
                 <!-- btn -->
-                <div class="col-12 d-grid"> <button type="submit" class="btn btn-primary">Register</button>
+                <div class="col-12 d-grid"> <button type="submit" class="btn btn-info">Register</button>
                 </div>
   
                 <!-- text -->
-                <p><small>By continuing, you agree to our <a href="#!"> Terms of Service</a> &amp; <a href="#!">Privacy
-                      Policy</a></small></p>
+                <p><small>By continuing, you agree to our Terms of Service &amp; Privacy
+                      Policy</small></p>
               </div>
             </form>
           </div>
