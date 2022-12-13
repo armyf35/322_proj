@@ -41,6 +41,7 @@ def signin():
         cur.execute("SELECT * FROM AllUser WHERE email = ?", (email,))
         user = cur.fetchone()
         if (user is None):
+            conn.close()
             flash('No user with email found')
             return render_template("signin.html")
 
@@ -106,9 +107,22 @@ def logout():
     logout_user()
     return render_template('signin.html')
 
-@app.route('/product')
-def product():
-    return render_template("product.html")
+@app.route('/product/<int:id>')
+def product(id):
+    connection = get_db_connection()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM Item WHERE ItemID = ?", (id,))
+
+    item = cursor.fetchone()
+    if (item is None):
+        connection.close()
+        flash("No item")
+        return render_template("product-default.html")
+
+    # item = list(item)
+
+    return render_template("product.html", item = item)
+
 
 @app.route('/setting')
 def setting():

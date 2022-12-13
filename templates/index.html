@@ -10,7 +10,7 @@
       <div class="row justify-content-left pb-5">
         <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-left">
           <h5 class="text-light fw-light">Shop New Phone Here</h5>
-          <div class="h1 text-light mb-3 pb-4">iPhone 14 Pro Max and iPhone 14 mini Available 
+          <div class="h1 text-light mb-3 pb-4">iPhone 14 Pro Max and iPhone 14 mini Available
           </div><a class="btn btn-info" href="#cuisine" data-scroll="">Shop Here</a>
         </div>
       </div>
@@ -31,7 +31,7 @@
                <h3 class=" mb-0">New Products</h3>
                <p class="mb-0">New products with updated stocks</p>
              </div>
-             <div> 
+             <div>
              </div>
            </div>
          </div>
@@ -44,21 +44,19 @@
              <div class="tab-pane fade active show" id="nav-fruitsandveg" role="tabpanel" aria-labelledby="nav-fruitsandveg-tab" tabindex="0">
   <!-- row -->
                <div class="row row-cols-2 row-cols-xl-5 row-cols-md-3 g-4">
+
+                {% for i in range(1, 11) %}
                  <div class="col ">
                  <!-- card -->
                    <div class="card  card-product-v2 h-100">
                      <div class="card-body position-relative">
-
-
-
-
   <!-- badge -->
                        <div class="text-center position-relative ">
                          <!-- img -->
-                         <a href="{{url_for('product')}}"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+                         <a href="{{ url_for('product', id = i) }}"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
                        </div>
                        <!-- title -->
-                       <h2 class="fs-6"><a href="{{url_for('product')}}" class="text-inherit text-decoration-none">Haldiram's Sev
+                       <h2 class="fs-6"><a href="{{ url_for('product', id = i) }}" class="text-inherit text-decoration-none">Haldiram's Sev
                            Bhujia</a></h2>
                        <div>
   <!-- rating -->
@@ -78,15 +76,18 @@
                         <!-- btn -->
                        <div class="product-fade-block">
                          <div class="d-grid mt-4">
-                           <a href="{{url_for('product')}}" class="btn btn-info rounded-pill">Bid now</a>
+                           <a href="{{ url_for('product', id = i) }}" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
                    </div>
                  </div>
+                {% endfor %}
+
+
                  <div class="col ">
                  <!-- card -->
                    <div class="card  card-product-v2 h-100">
@@ -94,16 +95,16 @@
 
 
 
-                      
+
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
-                         <a href="{{url_for('product')}}"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
- 
+                         <a href="{{url_for('product', id=1)}}"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+
                        </div>
                        <!-- title -->
-                       <h2 class="fs-6"><a href="{{url_for('product')}}" class="text-inherit text-decoration-none">Britannia NutriChoice
+                       <h2 class="fs-6"><a href="{{url_for('product', id=1)}}" class="text-inherit text-decoration-none">Britannia NutriChoice
                            Digestive Biscuits</a></h2>
                        <div>
   <!-- rating -->
@@ -123,10 +124,10 @@
                         <!-- btn -->
                        <div class="product-fade-block">
                          <div class="d-grid mt-4">
-                           <a href="{{url_for('product')}}" class="btn btn-info rounded-pill">Bid now</a>
+                           <a href="{{url_for('product', id=1)}}" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -138,10 +139,10 @@
                      <div class="card-body position-relative">
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
- 
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Cadbury 5 star
@@ -167,7 +168,7 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -179,14 +180,14 @@
                      <div class="card-body position-relative">
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
-                         <a href="{{url_for('product')}}"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-                       
+                         <a href="{{url_for('product', id=1)}}"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+
 
                        </div>
                        <!-- title -->
-                       <h2 class="fs-6"><a href="{{url_for('product')}}" class="text-inherit text-decoration-none">Onion Flavour Potato</a>
+                       <h2 class="fs-6"><a href="{{url_for('product', id=1)}}" class="text-inherit text-decoration-none">Onion Flavour Potato</a>
                        </h2>
                        <div>
   <!-- rating -->
@@ -206,10 +207,10 @@
                         <!-- btn -->
                        <div class="product-fade-block">
                          <div class="d-grid mt-4">
-                           <a href="{{url_for('product')}}" class="btn btn-info rounded-pill">Bid now</a>
+                           <a href="{{url_for('product', id=1)}}" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -223,7 +224,7 @@
                        <div class="text-center position-relative ">
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-    
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Salted Instant
@@ -249,7 +250,7 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -261,11 +262,11 @@
                      <div class="card-body position-relative">
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-        
- 
+
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Epigamia Blueberry Greek
@@ -292,7 +293,7 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -304,11 +305,11 @@
                      <div class="card-body position-relative">
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
 
- 
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Kellogg's Special K
@@ -335,7 +336,7 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -350,11 +351,11 @@
 
 
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
- 
- 
+
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Slurrp Farm No Maida
@@ -381,7 +382,7 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -390,18 +391,18 @@
                  <div class="col ">
                  <!-- card -->
                    <div class="card  card-product-v2 h-100">
-                     <div class="card-body position-relative">  
+                     <div class="card-body position-relative">
 
 
 
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
                          <!-- action btn -->
 
- 
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Britannia NutriChoice
@@ -427,7 +428,7 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
@@ -439,10 +440,10 @@
                      <div class="card-body position-relative">
   <!-- badge -->
                        <div class="text-center position-relative ">
- 
+
                          <!-- img -->
                          <a href="#!"> <img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
- 
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Cadbury 5 star
@@ -468,28 +469,28 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
                    </div>
                  </div>
- 
- 
- 
+
+
+
                </div>
- 
- 
+
+
              </div>
              <div class="tab-pane fade" id="nav-snackMunchies" role="tabpanel" aria-labelledby="nav-snackMunchies-tab" tabindex="0">
- 
+
                <div class="row row-cols-2 row-cols-xl-5 row-cols-md-3 g-4">
- 
+
                  <div class="col ">
                  <!-- card -->
                    <div class="card  card-product-v2 h-100">
                      <div class="card-body position-relative">
-  
+
                        </div>
                        <!-- title -->
                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Slurrp Farm No Maida
@@ -516,25 +517,25 @@
                            <a href="#" class="btn btn-info rounded-pill">Bid now</a>
                          </div>
                        </div>
- 
+
                      </div>
                      <!-- hidden class for hover -->
                      <div class="product-content-fade border-info" style="margin-bottom: -60px;"></div>
                    </div>
                  </div>
- 
- 
+
+
                </div>
              </div>
- 
+
            </div>
          </div>
        </div>
- 
+
    </section>
 
    <!-- Javascript-->
-   <!-- Libs JS 
+   <!-- Libs JS
  <script src="/static/js/a/jquery.min.js"></script>
  <script src="/static/js/a/bootstrap.bundle.min.js"></script>
  <script src="/static/js/a/jquery.countdown.min.js"></script>
@@ -551,7 +552,7 @@
  <script src="/static/js/a/jquery.inputmask.min.js"></script>-->
  <!-- Theme JS
  <script src="/static/js/a/theme.min.js"></script>-->
- 
+
  </body>
-    
+
 {% endblock %}
