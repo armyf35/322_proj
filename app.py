@@ -53,7 +53,8 @@ def signin():
             login_user(userIn)
             msg = 'Successfully logged in: ', current_user.getEmail() , " " , current_user.getFirstName() , " " , current_user.getLastName()
             flash(msg)
-            return render_template("account-settings.html")
+            # return render_template("account-settings.html")
+            return redirect(url_for('index'))
         else:
             flash('fail')
             return render_template("signin.html")
@@ -98,7 +99,8 @@ def signup():
             conn.commit()
             flash('SUCCESS, Please log in')
             conn.close()
-            return render_template("signin.html")
+            # return render_template("signin.html")
+            return redirect(url_for('signin'))
 
     return render_template('signup.html')
 
