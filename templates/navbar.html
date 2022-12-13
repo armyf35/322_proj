@@ -1,12 +1,12 @@
     <!-- navigation -->
-    <nav class="navbar py-lg-4 py-3 px-0 border-bottom navbar-menu">  
+    <nav class="navbar py-lg-4 py-3 px-0 border-bottom navbar-menu">
       <div class="container-fluid">
         <div class="row w-100 align-items-center g-0 g-lg-3">
           <div class="col-xxl-10 col-lg-8">
             <div class="d-flex align-items-center">
               <a class="navbar-brand d-none d-lg-block ms-4" href="/">
                 <img src="/static/img/logo.png" alt="Bidhub">
-    
+
               </a>
               <div class="d-flex  w-100 ms-4 ">
                 <form action="#" class="w-100 d-none d-lg-block">
@@ -21,111 +21,40 @@
                         </button>
                     </span>
                 </div>
-    
+
                 </form>
               </div>
             </div>
             <div class="d-flex justify-content-between w-100 d-lg-none align-items-center">
-              <button class="navbar-toggler collapsed " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-default" aria-controls="navbar-default">
-                <span class="icon-bar top-bar mt-0"></span>
-                <span class="icon-bar middle-bar"></span>
-                <span class="icon-bar bottom-bar"></span>
-              </button>
+
               <a class="navbar-brand" href="{{url_for('index')}}">
                 <img src="/static/img/logo.png" alt="Bidhub">
               </a>
               <div class="d-flex align-items-center lh-1">
-                <div class="list-inline me-2">
-                  <div class="list-inline-item">
-                    <a href="#!" class="text-muted" data-bs-toggle="modal" data-bs-target="#userModal">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                      </svg>
-                    </a></div>
-                  <div class="list-inline-item">
-                    <a class="text-muted position-relative " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" href="#offcanvasExample" role="button" aria-controls="offcanvasRight">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                      </svg>
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                        1
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <!-- Button -->
               </div>
             </div>
           </div>
-    
+
           <div class="col-xxl-2 col-lg-4 d-flex align-items-center justify-content-end ">
             <!-- Button trigger modal -->
-            <div class="list-inline  d-lg-block d-none">
-            
-              <div class="list-inline-item">
-    
-                <a href="#!" class="text-muted" data-bs-toggle="modal" data-bs-target="#userModal">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                </a></div>
-            </div>
+
           </div>
         </div>
-  
+
     </nav>
     <!-- Modal -->
-    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content p-4">
-          <div class="modal-header border-0">
-            <h5 class="modal-title fs-3 fw-bold" id="userModalLabel">Sign Up</h5>
-    
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="fullName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="fullName" placeholder="Enter Your Name" required="">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter Email address" required="">
-              </div>
-    
-              <div class="mb-5">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter Password" required="">
-                <small class="form-text">By Signup, you agree to our <a href="#!">Terms of Service</a> &amp; <a href="#!">Privacy Policy</a></small>
-              </div>
-    
-              <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
-          </div>
-          <div class="modal-footer border-0 justify-content-center">
-    
-            Already have an account? <a href="{{url_for('signin')}}">Sign in</a>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <div class="border-bottom pb-lg-4 pb-3">
       <nav class="navbar navbar-expand-lg navbar-light navbar-default pt-0 pb-0">
         <div class="container px-0 px-md-3">
-    
+
           <div class="offcanvas offcanvas-start p-4 p-lg-0" id="navbar-default">
-    
+
             <div class="d-flex justify-content-between align-items-center mb-2 d-block d-lg-none">
               <a href="/"><img src="/static/img/logo.png" alt="Bidhub"></a>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>    
+            </div>
 
             <div class="d-none d-lg-block">
               <ul class="navbar-nav ">
@@ -139,7 +68,7 @@
                     Shop
                   </a>
                 </li>
-    
+
                 <li class="nav-item dropdown">
                   <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Account <i class="bi bi-chevron-down"></i>
@@ -149,26 +78,21 @@
                     <li><a class="dropdown-item" href="{{url_for('signin')}}">Sign in</a></li>
                     <li><a class="dropdown-item" href="{{url_for('signup')}}">Signup</a></li>
                     <li><a class="dropdown-item" href="../pages/forgot-password.html">Forgot Password</a></li>
-
                     {% else %}
                     <li><a class="dropdown-item" href="{{url_for('orders')}}">Orders</a></li>
                     <li><a class="dropdown-item" href="{{url_for('setting')}}">Settings</a></li>
                     <li><a class="dropdown-item" href="{{url_for('address')}}">Address</a></li>
                     <li><a class="dropdown-item" href="{{url_for('payment')}}">Payment Method</a></li>
-
                     {% endif %}
-                  
-                     
-                    
                   </ul>
                 </li>
               </ul>
             </div>
- 
-    
-    
+
+
+
           </div>
         </div>
-    
+
       </nav>
     </div>

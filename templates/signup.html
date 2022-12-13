@@ -3,7 +3,9 @@
 {% block content %}
 
 <body>
-  
+    {% for message in get_flashed_messages() %}
+      <div class="alert-error">Error: {{ message }}</div>
+    {% endfor %}
     <main>
     <!-- section -->
     <section class="my-lg-14 my-8">
@@ -34,29 +36,29 @@
                   <!-- input --><input type="text" name="lastname" class="form-control" placeholder="Last name" aria-label="Last name" required="">
                 </div>
                 <div class="col-12">
-  
+
                   <!-- input --><input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" required="">
                 </div>
                 <div class="col-12">
-  
+
                   <!-- input --><input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Password" required="">
                 </div>
                 <!-- btn -->
-                <div class="col-12 d-grid"> <button type="submit" class="btn btn-primary">Register</button>
+                <div class="col-12 d-grid"> <button type="submit" class="btn btn-info">Register</button>
                 </div>
-  
+
                 <!-- text -->
-                <p><small>By continuing, you agree to our <a href="#!"> Terms of Service</a> &amp; <a href="#!">Privacy
-                      Policy</a></small></p>
+                <p><small>By continuing, you agree to our Terms of Service &amp; Privacy
+                      Policy</small></p>
               </div>
             </form>
           </div>
         </div>
       </div>
-  
-  
+
+
     </section>
     </main>
-  
+
   </body>
 {% endblock %}
