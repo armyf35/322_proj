@@ -175,7 +175,7 @@ def uploader():
         return render_template("account-payment.html")
 
 
-@app.route('/product')
+@app.route('/product', methods=['POST', 'GET'])
 def product():
     return render_template("product.html")
 
