@@ -3,13 +3,9 @@
 {% block content %}
 
 <body>
-  <h1>Flashing messages</h1>
-    {% for message in get_flashed_messages() %}
-      <div class="alert-error">Error: {{ message }}</div>
-    {% endfor %}
+  
     <main>
     <!-- section -->
-    
     <section class="my-lg-14 my-8">
       <!-- container -->
       <div class="container">
@@ -25,8 +21,10 @@
               <h1 class="mb-1 h2 fw-bold">LET'S GET STARTED</h1>
               <p>Welcome to Bidhub! Enter your email to get started.</p>
             </div>
+
             <!-- form -->
             <form method = "POST">
+
               <div class="row g-3">
                 <!-- col -->
                 <div class="col">

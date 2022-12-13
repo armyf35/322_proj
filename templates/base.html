@@ -58,6 +58,10 @@
   </style><style></style></head>
   <body>
     {% include 'navbar.html' %}
+    
+    {% for message in get_flashed_messages() %}
+    <div class="alert">INFO: {{ message }}</div>
+  {% endfor %}
     <br/>
     <div class = "container">
       {% block content %}
