@@ -17,7 +17,7 @@
               <!-- card body -->
               <div class="card-body p-9">
                 <!-- title -->
-                <h2 class="mb-0 fs-1">Snacks &amp; Munchies</h2>
+                <h2 class="mb-0 fs-1">Products</h2>
               </div>
             </div>
             <!-- list icon -->
@@ -52,7 +52,8 @@
               </div>
             </div>
             <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3 mt-2">
-  
+              
+              {% for product in products %}
               <!-- col -->
               <div class="col">
                 <!-- card product -->
@@ -71,7 +72,7 @@
                     <!-- heading -->
                     <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &amp;
                           Munchies</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Haldiram's Sev Bhujia</a></h2>
+                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">{{product['Title']}}</a></h2>
                     <div>
   
                       <!-- rating --><small class="text-warning"> <i class="bi bi-star-fill"></i>
@@ -82,13 +83,16 @@
                     </div>
                     <!-- price -->
                     <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$18</span> <span class="text-decoration-line-through text-muted">$24</span>
+                      <div><span class="text-dark">${{product['StartPrice']}}</span> 
                       </div>
 
                     </div>
                   </div>
                 </div>
               </div>
+
+              {% endfor %}
+
               <!-- col -->
               <div class="col">
                 <!-- card product -->
@@ -121,237 +125,9 @@
                   </div>
                 </div>
               </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <div class="text-center position-relative"> <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-              
-                     
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Bakery &amp;
-                          Biscuits</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Cadbury 5 Star Chocolate</a>
-                    </h2>
-                    <!-- rating -->
-                    <div class="text-warning">
-  
-                      <small> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5 (469)</span>
-                    </div>
-                    <!-- price -->
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$32</span> <span class="text-decoration-line-through text-muted">$35</span>
-                      </div>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <div class="text-center position-relative"> <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-               
-                     
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &amp;
-                          Munchies</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Onion Flavour Potato</a></h2>
-                    <!-- rating -->
-                    <div class="text-warning">
-  
-                      <small> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <i class="bi bi-star"></i></small> <span class="text-muted small">3.5 (456)</span>
-                    </div>
-                    <!-- price -->
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$3</span> <span class="text-decoration-line-through text-muted">$5</span>
-                      </div>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <div class="text-center position-relative"> <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-                 
-                     
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Instant
-                          Food</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Salted Instant Popcorn </a>
-                    </h2>
-                    <!-- rating -->
-                    <div class="text-warning">
-  
-                      <small> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (39)</span>
-                    </div>
-                    <div class="d-flex justify-content-between mt-4">
-                      <div><span class="text-dark">$13</span> <span class="text-decoration-line-through text-muted">$18</span>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <!-- badge -->
-                    <div class="text-center position-relative ">
-                      <div class=" position-absolute top-0">
-                
-                      </div>
-  
-                      <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-                  
-                      
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread
-                          &amp; Eggs</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Blueberry Greek Yogurt</a>
-                    </h2>
-                    <div>
-  
-                      <!-- rating --><small class="text-warning"> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (189)</span>
-                    </div>
-                    <!-- price -->
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$18</span> <span class="text-decoration-line-through text-muted">$24</span>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <div class="text-center position-relative"> <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-                    
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread
-                          &amp; Eggs</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Britannia Cheese Slices</a>
-                    </h2>
-                    <!-- rating -->
-                    <div class="text-warning">
-  
-                      <small> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5 (345)</span>
-                    </div>
-                    <!-- price -->
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$24</span>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <div class="text-center position-relative"> <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-                     
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Instant
-                          Food</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Kellogg's Original Cereals</a>
-                    </h2>
-                    <!-- rating -->
-                    <div class="text-warning">
-  
-                      <small> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4 (90)</span>
-                    </div>
-                    <!-- price -->
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$32</span> <span class="text-decoration-line-through text-muted">$35</span>
-                      </div>
-   
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- col -->
-              <div class="col">
-                <!-- card product -->
-                <div class="card card-product">
-                  <div class="card-body">
-                    <div class="text-center position-relative"> <a href="shop-single.html">
-                        <!-- img --><img src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png" alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
-                     
-                    </div>
-                    <!-- heading -->
-                    <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &amp;
-                          Munchies</small></a></div>
-                    <h2 class="fs-6"><a href="shop-single.html" class="text-inherit text-decoration-none">Slurrp Millet Chocolate </a>
-                    </h2>
-                    <!-- rating -->
-                    <div class="text-warning">
-  
-                      <small> <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (67)</span>
-                    </div>
-                    <!-- price -->
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                      <div><span class="text-dark">$3</span> <span class="text-decoration-line-through text-muted">$5</span>
-                      </div>
-         
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
               <!-- col -->
               <div class="col">
                 <!-- card product -->
@@ -408,6 +184,10 @@
                 </nav>
               </div>
             </div>
+
+
+
+
           </div>
         </div>
       </div>
@@ -556,28 +336,7 @@
                 </div>
                 <hr class="my-6">
                 <div>
-                  <table class="table table-borderless">
-                    <tbody>
-                      <tr>
-                        <td>Product Code:</td>
-                        <td>FBB00255</td>
-                      </tr>
-                      <tr>
-                        <td>Availability:</td>
-                        <td>In Stock</td>
-                      </tr>
-                      <tr>
-                        <td>Type:</td>
-                        <td>Fruits</td>
-                      </tr>
-                      <tr>
-                        <td>Shipping:</td>
-                        <td>
-                          <small>01 day shipping.<span class="text-muted">( Free pickup today)</span></small>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                 
                 </div>
               </div>
             </div>
@@ -586,7 +345,6 @@
       </div>
     </div>
   </div>
-  
   
 
   

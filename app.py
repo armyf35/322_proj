@@ -1,6 +1,8 @@
+from distutils.command import upload
 import os
 import sqlite3
-
+from accounts import OrdinaryUser
+from werkzeug.utils import secure_filename
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from accounts import AllUser
 from flask import Flask, flash, redirect, render_template, request, session
@@ -28,7 +30,7 @@ def load_user(user_id):
    if user is None:
       return None
    else:
-      return AllUser(int(user[0]), user[1], user[4], user[2], user[3])
+      return OrdinaryUser(int(user[0]), user[1], user[4], user[2], user[3])
 
 @app.route('/signin', methods=['POST', 'GET'])
 def signin():
@@ -42,7 +44,7 @@ def signin():
         user = list(cur.fetchone())
         
         if user[1] == email and user[4] == password:
-            userIn = AllUser(user[0], user[1], user[4], user[2], user[3])
+            userIn = OrdinaryUser(user[0], user[1], user[4], user[2], user[3])
             login_user(userIn)
             msg = 'Successfully logged in: ', current_user.getEmail() , " " , current_user.getFirstName() , " " , current_user.getLastName()
             flash(msg)
@@ -63,7 +65,10 @@ def index():
 
 @app.route('/search')
 def search():
-    return render_template("search.html")
+    conn = get_db_connection()
+    products = conn.execute('SELECT * FROM Item').fetchall()
+    conn.close()
+    return render_template("search.html", products=products)
 
 
 @app.route('/signup', methods=['POST', 'GET'])
@@ -100,6 +105,65 @@ def signup():
 def logout():
     logout_user()
     return render_template('signin.html')
+
+
+
+@app.route('/createItem')
+def createItem():
+    if request.method == 'POST':
+        title = request.form['title']
+        productImage = request.files['Product Image']
+        price = request.form['price']
+        productImage.save(secure_filename(productImage.filename))
+
+        ownerID = current_user.getID
+
+        if not title:
+            flash('Title is required!')
+        elif not productImage:
+            flash('Image is required!')
+        else:
+            conn = get_db_connection()
+            conn.execute("INSERT INTO Item (ownerID,Title,startPrice) VALUES (?,?)",(ownerID,title,price))
+            conn.commit()
+
+            cur = conn.cursor();
+            cur.execute("SELECT * FROM Item WHERE ID = (SELECT MAX(ID)  FROM Item)")
+            item = list(cur.fetchone())
+            
+
+            conn.execute("INSERT INTO ItemFilePicture(FileName, ItemID) VALUES (?,?)",(ownerID,item[0]))
+            
+            flash('SUCCESS, PLease see Index')
+            conn.close()
+
+    return render_template('createItem.html')
+
+
+@app.route('/uploader', methods = ['GET', 'POST'])
+def uploader():
+   if request.method == 'POST':
+        title = request.form['title']
+        productImage = request.files['file']
+        price = request.form['price']
+        imagePic = "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png"
+
+        ownerID = 1
+        #ownerID = current_user.getID
+        if not title:
+            flash('Title is required!')
+        elif not productImage:
+            flash('Image is required!')
+        else:
+            conn = get_db_connection()
+            conn.execute("INSERT INTO Item (ownerID,Title, StartPrice, FileName) VALUES (?,?,?,?)",(ownerID,title, price,imagePic))
+            conn.commit()
+
+            
+            flash('SUCCESS, PLease see Index')
+            conn.close()
+        return render_template("account-payment.html")
+
 
 @app.route('/product')
 def product():

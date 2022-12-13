@@ -40,11 +40,12 @@ class AllUser(UserMixin):
          self.id = id
      def changePhoneNumber(self, id):
           self.id = id
-     def changeUserType(self, userType):
+     def changeUserType(self, userType = 1):
           self.userType = userType
 
      def getName(self):
                return self.firstname + ' ' + self.lastname
+     
      def getID(self):
           return self.id
      def getEmail(self):
@@ -59,9 +60,11 @@ class AllUser(UserMixin):
           return self.lastname
 
 class OrdinaryUser(AllUser):
-     def __init__(self):
-          AllUser.__init__(self)
-          self.userType = 1
+     def __init__(self, id, email, password, firstname, lastname):
+          AllUser.__init__(self, id, email, password, firstname, lastname)
+          AllUser.changeUserType(OrdinaryUser, 1)
+     pass
+          
 
 
      

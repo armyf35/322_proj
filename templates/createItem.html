@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Create a New Product {% endblock %}</h1>
+    <form  action = "http://localhost:5000/uploader" method = "POST"enctype = "multipart/form-data" method="post">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="product title"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+        <br> <br>
+
+        <label for="price">Starting Price</label>
+        <br>
+        <input type="double" name="price"
+               placeholder="set price"
+               value=""></input>
+        <br>
+
+        <p style="color:blue;">Choose image file to upload</p>
+        <label for="Product Image">Product Image</label>
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+        
+        
+        <!-- <br> <br>
+        <form action="/show_data" target="_blank">
+            <input type="submit" value="Show Image" />
+        </form> -->
+        <br> <br>
+        <div class="col-xxl-4 col-lg-4 col-md-5 col-5 d-grid">
+            <!-- button -->
+            <!-- btn --> <button type="submit" class="btn btn-primary"></i>Create Product</button>
+          </div>
+    </form>
+{% endblock %}

@@ -1,7 +1,4 @@
-DROP TABLE IF EXISTS AllUser;
-DROP TABLE IF EXISTS SuperUser;
-DROP TABLE IF EXISTS OrdinaryUser;
-DROP TABLE IF EXISTS GuestUser;
+
 DROP TABLE IF EXISTS Item;
 DROP TABLE IF EXISTS RatingUser;
 DROP TABLE IF EXISTS BidsHistory;
@@ -11,42 +8,43 @@ DROP TABLE IF EXISTS ItemFilePicture;
 DROP TABLE IF EXISTS Report;
 DROP TABLE IF EXISTS Tags;
 DROP TABLE IF EXISTS Warning;
+DROP TABLE IF EXISTS Complaint;
 
 
 
 
 
-CREATE TABLE AllUser (
-    ID INTEGER PRIMARY KEY,
-    email TEXT UNIQUE NOT NULL,
-    firstName TEXT NOT NULL,
-    lastName TEXT NOT NULL,
-    password TEXT NOT NULL,
-    address TEXT,
-    phoneNumber INTEGER,
-    userType INTEGER DEFAULT 0
-);
+-- CREATE TABLE AllUser (
+--     ID INTEGER PRIMARY KEY,
+--     email TEXT UNIQUE NOT NULL,
+--     firstName TEXT NOT NULL,
+--     lastName TEXT NOT NULL,
+--     password TEXT NOT NULL,
+--     address TEXT,
+--     phoneNumber INTEGER,
+--     userType INTEGER DEFAULT 0
+-- );
 
-CREATE TABLE SuperUser (
-    ID INTEGER PRIMARY KEY,
-    FOREIGN KEY (ID) REFERENCES AllUser (ID)
-);
+-- CREATE TABLE SuperUser (
+--     ID INTEGER PRIMARY KEY,
+--     FOREIGN KEY (ID) REFERENCES AllUser (ID)
+-- );
 
-CREATE TABLE OrdinaryUser (
-    ID INTEGER PRIMARY KEY,
-    superUserID INTEGER UNIQUE,
-    banHammer BOOLEAN DEFAULT 0,
-    balance REAL NOT NULL,
-    rating REAL,
-    FOREIGN KEY (ID) REFERENCES AllUser (ID),
-    FOREIGN KEY (superUserID) REFERENCES SuperUser (ID)
-);
+-- CREATE TABLE OrdinaryUser (
+--     ID INTEGER PRIMARY KEY,
+--     superUserID INTEGER UNIQUE,
+--     banHammer BOOLEAN DEFAULT 0,
+--     balance REAL NOT NULL,
+--     rating REAL,
+--     FOREIGN KEY (ID) REFERENCES AllUser (ID),
+--     FOREIGN KEY (superUserID) REFERENCES SuperUser (ID)
+-- );
 
-CREATE TABLE GuestUser (
-    ID INTEGER PRIMARY KEY,
-    superUserID INTEGER UNIQUE,
-    ApplicationStatus INTEGER
-);
+-- CREATE TABLE GuestUser (
+--     ID INTEGER PRIMARY KEY,
+--     superUserID INTEGER UNIQUE,
+--     ApplicationStatus INTEGER
+-- );
 
 CREATE TABLE RatingUser (
     ReferenceID INTEGER PRIMARY KEY,
@@ -60,12 +58,13 @@ CREATE TABLE RatingUser (
 
 CREATE TABLE Item (
     ItemID INTEGER PRIMARY KEY,
-    OwnerID INTEGER UNIQUE,
+    OwnerID INTEGER,
     Title TEXT NOT NULL,
     Status INTEGER,
     StartTime DATETIME,
     EndTime DATETIME,
     StartPrice REAL NOT NULL,
+    FileName TEXT,
     WinningBid REAL,
     SUID INTEGER UNIQUE,
     FOREIGN KEY (OwnerID) REFERENCES OrdinaryUser (ID),
