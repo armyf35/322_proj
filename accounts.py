@@ -13,7 +13,7 @@ class AllUser(UserMixin):
          self.phoneNumber = 0000000000
          self.firstname = firstname
          self.lastname = lastname
-         self.userType = 1
+         self.userType = 0
          self.authenticated = False
     
      def _init_(self, id):
@@ -40,6 +40,8 @@ class AllUser(UserMixin):
          self.id = id
      def changePhoneNumber(self, id):
           self.id = id
+     def changeUserType(self, userType):
+          self.userType = userType
 
      def getName(self):
                return self.firstname + ' ' + self.lastname
@@ -55,6 +57,12 @@ class AllUser(UserMixin):
           return self.firstname
      def getLastName(self):
           return self.lastname
+
+class OrdinaryUser(AllUser):
+     def __init__(self):
+          AllUser.__init__(self)
+          self.userType = 1
+
 
      
     

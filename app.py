@@ -49,8 +49,11 @@ def signin():
             return render_template("account-settings.html")
         else:
             flash('fail')
+            return render_template("signin.html")
 
     return render_template("signin.html")
+
+    
 
 @app.route('/')
 def index():
@@ -90,9 +93,7 @@ def signup():
             conn.close()
             return render_template("signin.html")
 
-    else:
-        flash('FAILURE to sign up')
-        return render_template('signup.html')
+    return render_template('signup.html')
 
 @app.route("/logout")
 @login_required
@@ -106,7 +107,6 @@ def product():
 
 @app.route('/setting')
 def setting():
-    con = get_db_connection()
     
     return render_template("account-settings.html")
 
