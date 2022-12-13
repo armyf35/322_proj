@@ -3,7 +3,7 @@ import sqlite3
 
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from accounts import AllUser
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, flash, redirect, url_for, render_template, request, session
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
@@ -104,7 +104,8 @@ def signup():
 @login_required
 def logout():
     logout_user()
-    return render_template('signin.html')
+    # return render_template('signin.html')
+    return redirect(url_for('signin'))
 
 @app.route('/product')
 def product():
