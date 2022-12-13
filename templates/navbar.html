@@ -77,7 +77,6 @@
                     {% if not current_user.is_authenticated %}
                     <li><a class="dropdown-item" href="{{url_for('signin')}}">Sign in</a></li>
                     <li><a class="dropdown-item" href="{{url_for('signup')}}">Signup</a></li>
-                    <li><a class="dropdown-item" href="../pages/forgot-password.html">Forgot Password</a></li>
                     {% else %}
                     <li><a class="dropdown-item" href="{{url_for('orders')}}">Orders</a></li>
                     <li><a class="dropdown-item" href="{{url_for('setting')}}">Settings</a></li>
