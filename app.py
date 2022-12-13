@@ -25,6 +25,7 @@ def load_user(user_id):
    curs = conn.cursor()
    curs.execute("SELECT * from AllUser where ID = (?)",[user_id])
    user = curs.fetchone()
+   conn.close()
    if user is None:
       return None
    else:
@@ -40,6 +41,7 @@ def signin():
         cur = conn.cursor()
         cur.execute("SELECT * FROM AllUser WHERE email = ?", (email,))
         user = cur.fetchone()
+        conn.close()
         if (user is None):
             flash('No user with email found')
             return render_template("signin.html")
