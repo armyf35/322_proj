@@ -9,21 +9,21 @@ DROP TABLE IF EXISTS Report;
 DROP TABLE IF EXISTS Tags;
 DROP TABLE IF EXISTS Warning;
 DROP TABLE IF EXISTS Complaint;
+DROP TABLE IF EXISTS AllUser;
 
 
 
 
-
--- CREATE TABLE AllUser (
---     ID INTEGER PRIMARY KEY,
---     email TEXT UNIQUE NOT NULL,
---     firstName TEXT NOT NULL,
---     lastName TEXT NOT NULL,
---     password TEXT NOT NULL,
---     address TEXT,
---     phoneNumber INTEGER,
---     userType INTEGER DEFAULT 0
--- );
+ CREATE TABLE AllUser (
+    ID INTEGER PRIMARY KEY,
+    email TEXT UNIQUE NOT NULL,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL,
+    password TEXT NOT NULL,
+    address TEXT,
+    phoneNumber INTEGER,
+    userType INTEGER DEFAULT 0
+ );
 
 -- CREATE TABLE SuperUser (
 --     ID INTEGER PRIMARY KEY,
@@ -100,13 +100,7 @@ CREATE TABLE Tags (
     FOREIGN KEY (ItemID) REFERENCES Item (ID)
 );
 
-CREATE TABLE ItemFilePicture (
-    FileID INTEGER PRIMARY KEY,
-    UploadName TEXT,
-    FileName TEXT,
-    ItemID INTEGER UNIQUE,
-    FOREIGN KEY (ItemID) REFERENCES Item (ID)
-);
+
 
 CREATE TABLE CreditCard (
     UserID INTEGER PRIMARY KEY,

@@ -68,8 +68,9 @@ def signin():
 @app.route('/')
 def index():
     conn = get_db_connection()
+    products = conn.execute('SELECT * FROM Item').fetchall()
     conn.close()
-    return render_template('index.html')
+    return render_template('index.html', products=products)
 
 @app.route('/search')
 def search():
@@ -154,9 +155,9 @@ def createItem():
 def uploader():
    if request.method == 'POST':
         title = request.form['title']
-        productImage = request.files['file']
+        productImage = request.form['pic']
         price = request.form['price']
-        imagePic = "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png"
+        
 
         ownerID = 1
         #ownerID = current_user.getID
@@ -166,18 +167,21 @@ def uploader():
             flash('Image is required!')
         else:
             conn = get_db_connection()
-            conn.execute("INSERT INTO Item (ownerID,Title, StartPrice, FileName) VALUES (?,?,?,?)",(ownerID,title, price,imagePic))
+            conn.execute("INSERT INTO Item (ownerID,Title, StartPrice, FileName) VALUES (?,?,?,?)",(ownerID,title, price, productImage))
             conn.commit()
 
             
-            flash('SUCCESS, PLease see Index')
+            flash('SUCCESS, Please see Index')
             conn.close()
         return render_template("account-payment.html")
 
 
-@app.route('/product', methods=['POST', 'GET'])
+@app.route('/product')
 def product():
-    return render_template("product.html")
+    conn = get_db_connection()
+    products = conn.execute('SELECT * FROM Item').fetchall()
+    conn.close()
+    return render_template("product.html", products=products)
 
 @app.route('/setting')
 def setting():
