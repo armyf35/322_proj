@@ -43,8 +43,9 @@ def signin():
         cur = conn.cursor()
         cur.execute("SELECT * FROM AllUser WHERE email = ?", (email,))
         user = cur.fetchone()
-        conn.close()
+        
         if (user is None):
+            conn.close()
             flash('No user with email found')
             return render_template("signin.html")
 
